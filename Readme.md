@@ -15,12 +15,12 @@ The setup supports both local development and server deployment configurations f
 #### `albos_dump.sql`
 Database dump file for the Albos application. Contains all the database structure and data.
 - **Usage**: Import this dump to restore the Albos database
-- **Export Command**: See `instructions.txt` for database export commands
+- **Export Command**: See `commands.md` for database export commands
 
 #### `gigpeppers_dump.sql`
 Database dump file for the GigPeppers application. Contains all the database structure and data.
 - **Usage**: Import this dump to restore the GigPeppers database
-- **Export/Import Commands**: See `instructions.txt` for detailed database commands
+- **Export/Import Commands**: See `commands.md` for detailed database commands
 
 ### Docker Configuration Files
 
@@ -64,13 +64,13 @@ Entrypoint script for the GigPeppers Docker container.
 #### `public/`
 Complete WordPress directory for **Albos** application.
 - **Contents**: All WordPress files, plugins, themes, images, etc.
-- **Sync Command**: See `instructions.txt` for rsync commands
+- **Sync Command**: See `commands.md` for rsync commands
 - **Purpose**: Main WordPress installation files
 
 #### `public_gp/`
 Complete WordPress directory for **GigPeppers** application.
 - **Contents**: All WordPress files, plugins, themes, images, etc.
-- **Sync Command**: See `instructions.txt` for rsync commands
+- **Sync Command**: See `commands.md` for rsync commands
 - **Purpose**: GigPeppers WordPress installation files
 
 ### Configuration Files
@@ -122,7 +122,7 @@ Sample environment file with placeholder values.
 3. **Import databases**:
    - Import `albos_dump.sql` for Albos
    - Import `gigpeppers_dump.sql` for GigPeppers
-   - See `instructions.txt` for specific commands
+   - See `commands.md` for specific commands
 
 ### Server/Production Setup
 
@@ -138,7 +138,7 @@ Sample environment file with placeholder values.
    ```
 
 3. **Import databases**:
-   - Export/import database data using commands in `instructions.txt`
+   - Export/import database data using commands in `commands.md`
 
 4. **SSL Configuration**:
    - SSL is enabled using Let's Encrypt
@@ -147,13 +147,13 @@ Sample environment file with placeholder values.
 ## Important Notes
 
 - **Different Versions**: Albos and GigPeppers run on different WordPress versions, hence separate Dockerfiles
-- **Database Commands**: All database export/import commands are documented in `instructions.txt`
-- **File Sync**: WordPress file sync commands (rsync) are available in `instructions.txt`
+- **Database Commands**: All database export/import commands are documented in `commands.md`
+- **File Sync**: WordPress file sync commands (rsync) are available in `commands.md`
 - **Environment Variables**: Production `.env` file is stored on the server with actual credentials
 - **SSL**: Production setup includes Let's Encrypt SSL certificates for both applications
 
 ## Reference Files
 
-- `instructions.txt`: Contains detailed commands for database operations and file synchronization
+- `commands.md`: Contains detailed commands for database operations and file synchronization
 - `.env.sample`: Template for environment variables
 - Server `.env`: Contains actual production credentials and API keys
