@@ -35,6 +35,7 @@ scp /Users/subin/albos_container/Dockerfile new-albos-docker:~/
 scp /Users/subin/albos_container/custom-php.ini new-albos-docker:~/
 scp /Users/subin/albos_container/Dockerfile.gigpeppers new-albos-docker:~/
 scp /Users/subin/albos_container/entrypoint.sh new-albos-docker:~/
+scp /Users/subin/albos_container/entrypoint-gigpeppers.sh new-albos-docker:~/
 
 scp -C /Users/subin/albos_container/albos_dump.sql new-albos-docker:~/
 scp -C /Users/subin/albos_container/gigpeppers_dump.sql new-albos-docker:~/
