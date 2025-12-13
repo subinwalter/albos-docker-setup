@@ -28,20 +28,20 @@ Update WordPress URLs:
 docker-compose exec db mysql -u wordpress -p<WORDPRESS_PASSWORD> wordpress -e "UPDATE wp_options SET option_value = 'http://localhost:8080' WHERE option_name = 'siteurl'; UPDATE wp_options SET option_value = 'http://localhost:8080' WHERE option_name = 'home';"
 
 
-scp /Users/subin/albos_container/docker-compose-server.yml new-albos-docker:~/docker-compose.yml
-scp /Users/subin/albos_container/nginx_server.conf new-albos-docker:~/nginx.conf
-scp /Users/subin/albos_container/.env new-albos-docker:~/
-scp /Users/subin/albos_container/Dockerfile new-albos-docker:~/
-scp /Users/subin/albos_container/custom-php.ini new-albos-docker:~/
-scp /Users/subin/albos_container/Dockerfile.gigpeppers new-albos-docker:~/
-scp /Users/subin/albos_container/entrypoint.sh new-albos-docker:~/
-scp /Users/subin/albos_container/entrypoint-gigpeppers.sh new-albos-docker:~/
+scp /Users/subin/albos-docker-setup/docker-compose-server.yml new-albos-docker:~/docker-compose.yml
+scp /Users/subin/albos-docker-setup/nginx_server.conf new-albos-docker:~/nginx.conf
+scp /Users/subin/albos-docker-setup/.env new-albos-docker:~/
+scp /Users/subin/albos-docker-setup/Dockerfile new-albos-docker:~/
+scp /Users/subin/albos-docker-setup/custom-php.ini new-albos-docker:~/
+scp /Users/subin/albos-docker-setup/Dockerfile.gigpeppers new-albos-docker:~/
+scp /Users/subin/albos-docker-setup/entrypoint.sh new-albos-docker:~/
+scp /Users/subin/albos-docker-setup/entrypoint-gigpeppers.sh new-albos-docker:~/
 
-scp -C /Users/subin/albos_container/albos_dump.sql new-albos-docker:~/
-scp -C /Users/subin/albos_container/gigpeppers_dump.sql new-albos-docker:~/
+scp -C /Users/subin/albos-docker-setup/albos_dump.sql new-albos-docker:~/
+scp -C /Users/subin/albos-docker-setup/gigpeppers_dump.sql new-albos-docker:~/
 
-rsync -avz /Users/subin/albos_container/public/ new-albos-docker:~/public/
-rsync -avz /Users/subin/albos_container/public_gp/ new-albos-docker:~/public_gp/
+rsync -avz /Users/subin/albos-docker-setup/public/ new-albos-docker:~/public/
+rsync -avz /Users/subin/albos-docker-setup/public_gp/ new-albos-docker:~/public_gp/
 
 
 Ubuntu machine commands
