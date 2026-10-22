@@ -1,7 +1,8 @@
-FROM php:8.1-fpm
+FROM php:8.3-fpm
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
+    ca-certificates \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libpng-dev \
@@ -11,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     git \
     mariadb-client \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd mysqli pdo_mysql zip exif
+    && docker-php-ext-install -j$(nproc) gd mysqli pdo_mysql zip exif opcache
 
 COPY custom-php.ini /usr/local/etc/php/conf.d/
 
